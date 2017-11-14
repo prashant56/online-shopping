@@ -28,7 +28,7 @@
     <!-- Custom CSS -->
     
     <link href="${css }/shop-homepage.css" rel="stylesheet">
-    
+    <link href="${css }/bootstrap.theme.css" rel="stylesheet">
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,6 +54,9 @@
     </c:if>
     <c:if test="${userClickContact == true}">
           <%@ include file ="contact.jsp" %>
+    </c:if>
+    <c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+          <%@ include file="listProducts.jsp" %>
     </c:if>
     <!-- /.container -->
     <%@ include file = "./shared/footer.jsp" %>
